@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "Wild",
+            "author": "Cheryl Strayed",
+            "ISBN": "123-456"
+        },
+        {
+            "id": 1,
+            "title": "Wild",
+            "author": "Cheryl Strayed",
+            "ISBN": "123-456"
+        }
+    ]
+}
