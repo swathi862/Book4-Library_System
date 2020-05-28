@@ -4,8 +4,8 @@ class BookCard extends Component {
 
     render() {
         return (
-	        <div class="container-main">
-                <div class="section-content">
+	        <div className="container-main">
+                <div className="section-content">
                 <h2>Search books: <input type="text"></input></h2><br />
                 <picture>
                     <img src={require('./books.jpeg')} alt="Books" />
@@ -14,7 +14,11 @@ class BookCard extends Component {
                             <small>"Always read something that will make you look good if you die in the middle of it."-P.J. O'Rourke</small>
                         </h2>
                         <ul>
-                            <p>Wild by Cheryl Strayed</p>
+                            <p>Title: {this.props.book.title}</p>
+                            <p>Author: {this.props.book.author}</p>
+                            <p>Genre: {this.props.book.genre}</p>
+                            <p>ISBN Number: {this.props.book.ISBN}</p>
+                            {/* <p>Available: {this.props.book.available}</p> */}
                         </ul>
                 </div>
                 

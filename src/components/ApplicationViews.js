@@ -1,8 +1,8 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
-import BookCard from './books/BookCard'
-import PatronCard from './patrons/PatronCard'
+import BookList from './books/BookList'
+import PatronList from './patrons/PatronList'
 
 
 class ApplicationViews extends Component {
@@ -14,10 +14,10 @@ class ApplicationViews extends Component {
           return <Home />
         }} />
         <Route path="/books" render={(props) => {
-          return <BookCard />
+          return <BookList />
         }} />
         <Route path="/patrons" render={(props) => {
-          return <PatronCard />
+          return <PatronList />
         }} />
       </React.Fragment>
     )
