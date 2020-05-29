@@ -6,5 +6,15 @@ export default {
   },
   getAll() {
     return fetch(`${remoteURL}/patrons`).then(result => result.json())
+  },
+  patch(id){
+    return fetch(`${remoteURL}/patrons/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({active: false}),
+        headers: {
+            'Content-type': 'application/json'
+        }
+    })
+    .then(result => result.json())
   }
 }

@@ -1,82 +1,82 @@
 {
-    "libraries": [
-        {
-            "id":1,
-            "name": "Ravenhurst Library",
-            "address": "54 Lost Way",
-            "url": "ravenhurstlib.com",
-            "username": "library1",
-            "email": "library1@email.com",
-            "password": "abc123"
-        }
-    ],
-    "books": [
-        {
-            "id": 1,
-            "title": "Wild",
-            "author": "Cheryl Strayed",
-            "genre": "Memoir",
-            "ISBN": "123456",
-            "libraryId": 1,
-            "available": false
-        },
-        {
-            "id": 2,
-            "title": "The Glass Castle",
-            "author": "Jeannette Walls",
-            "genre": "Memoir",
-            "ISBN": "123457",
-            "libraryId": 1,
-            "available": true
-        },
-        {
-            "id": 3,
-            "title": "Becoming",
-            "author": "Michelle Obama",
-            "genre": "Memoir",
-            "ISBN": "123458",
-            "libraryId": 1,
-            "available": false
-        }
-    ],
-    "patrons": [
-        {
-            "id": 1,
-            "name": "Swathi Mukkamala",
-            "DOB": "04/10/1998",
-            "account_created": "05/28/2020",
-            "phone_number": "304-999-9999",
-            "email": "swathi@email.com",
-            "libraryId": 1,
-            "active": true
-        },
-        {
-            "id": 2,
-            "name": "Jessica Smith",
-            "DOB": "06/05/1994",
-            "account_created": "05/28/2020",
-            "phone_number": "304-666-6666",
-            "email": "jessica@email.com",
-            "libraryId": 1,
-            "active": true
-        }
-    ],
-    "books-patrons": [
-        {
-            "id": 1,
-            "bookId": 1,
-            "patronId": 1,
-            "due-date": "06/04/2020",
-            "checkOutDate": "05/28/2020",
-            "checkInDate": "05/31/2020"
-        },
-        {
-            "id": 2,
-            "bookId": 3,
-            "patronId": 2,
-            "due-date": "06/04/2020",
-            "checkOutDate": "05/28/2020",
-            "checkInDate": "05/31/2020"
-        }
-    ]
+  "libraries": [
+    {
+      "id": 1,
+      "name": "Ravenhurst Library",
+      "address": "54 Lost Way",
+      "url": "ravenhurstlib.com",
+      "username": "library1",
+      "email": "library1@email.com",
+      "password": "abc123"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Wild",
+      "author": "Cheryl Strayed",
+      "genre": "Memoir",
+      "ISBN": "123456",
+      "libraryId": 1,
+      "available": false
+    },
+    {
+      "id": 2,
+      "title": "The Glass Castle",
+      "author": "Jeannette Walls",
+      "genre": "Memoir",
+      "ISBN": "123457",
+      "libraryId": 1,
+      "available": true
+    },
+    {
+      "id": 3,
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "genre": "Memoir",
+      "ISBN": "123458",
+      "libraryId": 1,
+      "available": false
+    }
+  ],
+  "patrons": [
+    {
+      "id": 1,
+      "name": "Swathi Mukkamala",
+      "DOB": "04/10/1998",
+      "account_created": "05/28/2020",
+      "phone_number": "304-999-9999",
+      "email": "swathi@email.com",
+      "libraryId": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Jessica Smith",
+      "DOB": "06/05/1994",
+      "account_created": "05/28/2020",
+      "phone_number": "304-666-6666",
+      "email": "jessica@email.com",
+      "libraryId": 1,
+      "active": true
+    }
+  ],
+  "books-patrons": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "patronId": 1,
+      "due-date": "06/04/2020",
+      "checkOutDate": "05/28/2020",
+      "checkInDate": "05/31/2020"
+    },
+    {
+      "id": 2,
+      "bookId": 3,
+      "patronId": 2,
+      "due-date": "06/04/2020",
+      "checkOutDate": "05/28/2020",
+      "checkInDate": "05/31/2020"
+    }
+  ]
 }
