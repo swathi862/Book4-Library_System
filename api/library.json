@@ -40,6 +40,16 @@
       "libraryId": 1,
       "available": false,
       "coverPhoto": "https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL.jpg"
+    },
+    {
+      "title": "Jane Eyre",
+      "author": "Charlotte Bronte",
+      "genre": "Romance",
+      "ISBN": "123-982",
+      "libraryId": 1,
+      "available": true,
+      "coverPhoto": "https://img.clipartlook.com/book-clipart-download-this-image-as-600.png",
+      "id": 4
     }
   ],
   "patrons": [
@@ -62,6 +72,16 @@
       "email": "jessica@email.com",
       "libraryId": 1,
       "active": true
+    },
+    {
+      "name": "John Doe",
+      "DOB": "05/28/1993",
+      "phone_number": "xxx-xxx-xxxx",
+      "email": "john.doe@email.com",
+      "libraryId": 1,
+      "account_created": "06/02/2020",
+      "active": true,
+      "id": 3
     }
   ],
   "books-patrons": [
@@ -113,6 +133,5 @@
       "checkOutDate": "05/28/2017",
       "checkInDate": "05/31/2017"
     }
-    
   ]
 }

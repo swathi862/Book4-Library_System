@@ -11,14 +11,18 @@ class BookDetails extends Component {
       ISBN: "",
       available: "",
       coverPhoto: "",
-      patron: "",
+      patron: [],
+      checkOutDate: ""
   }
 
   getCheckoutDetails(){
     BookPatronManager.getPatronsfromBook(this.props.bookId)
     .then((bookDetails) =>{
-    console.log(bookDetails)
-        return bookDetails.patron
+        console.log(bookDetails)
+        this.setState({
+            patron: bookDetails.patron
+        })
+        console.log(this.state.patron)
     });
   }
   componentDidMount(){
@@ -26,6 +30,7 @@ class BookDetails extends Component {
     //get(id) from bookManager and hang on to the data; put it into state
     BookManager.get(this.props.bookId)
     .then((book) => {
+        console.log(book)
         this.setState({
             title: book.title,
             author: book.author,
@@ -33,13 +38,19 @@ class BookDetails extends Component {
             ISBN: book.ISBN,
             available: book.available,
             coverPhoto: book.coverPhoto,
-            patron: this.getCheckoutDetails()
         });
     })
-console.log(this.state.patron)
-console.log(this.getCheckoutDetails())
-
-
+    BookPatronManager.getPatronsfromBook(this.props.bookId)
+    .then((bookDetails) =>{
+        console.log(bookDetails)
+        bookDetails.map(book => (
+            this.setState({
+                patron: book.patron,
+                checkOutDate: book.checkOutDate
+            })
+            
+        ))
+        })
   }
 
   render() {
@@ -56,7 +67,9 @@ console.log(this.getCheckoutDetails())
             {this.state.available ? <p><em>Available</em></p> : ""}
             <h4>Previously Checked out by: 
                 <ul>
-                    <li>{this.state.patron}</li>
+                    <li>{this.state.patron.name}
+                    <br/><small>{this.state.checkOutDate}</small></li>
+
                 </ul>
             </h4>
         </div>

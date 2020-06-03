@@ -16,5 +16,14 @@ export default {
         }
     })
     .then(result => result.json())
+  },
+  post(newPatron){
+    return fetch(`${remoteURL}/patrons`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newPatron)
+    }).then(data => data.json())
   }
 }

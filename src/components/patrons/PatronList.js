@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import PatronCard from './PatronCard'
 import PatronManager from '../../modules/PatronManager'
+import { Button } from 'react-bootstrap'
 
     class PatronList extends Component {
         //define what this component needs to render
@@ -35,6 +36,17 @@ import PatronManager from '../../modules/PatronManager'
         console.log("PatronList: Render");
       
         return(
+        <>
+        <br/>
+        <section className="section-content">
+            <Button variant="success" type="button"
+                className="btn"
+                onClick={() => {this.props.history.push("/patrons/new")}}>
+                Add New Patron
+            </Button>
+            </section>
+            <br/>
+            <br/>
         <div className="pageContent">
             <h2>List of Patrons:<br />
                 </h2>
@@ -48,6 +60,7 @@ import PatronManager from '../../modules/PatronManager'
             )}
           </div>
         </div>
+        </>
         )
       }
 }

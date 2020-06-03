@@ -5,6 +5,6 @@ export default {
     return fetch(`${remoteURL}/books-patrons?bookId=${id}&_expand=patron`).then(result => result.json())
   },
   getBooksforPatrons(id) {
-    return fetch(`${remoteURL}/books-patrons?_expand=patrons/${id}`).then(result => result.json())
+    return fetch(`${remoteURL}/books-patrons?patronId=${id}&_expand=book`).then(result => result.json())
   }
 }

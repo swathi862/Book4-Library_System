@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import BookCard from './BookCard'
 import BookManager from '../../modules/BookManager'
+import Button from 'react-bootstrap/Button'
 
     class BookList extends Component {
         //define what this component needs to render
@@ -35,8 +36,17 @@ import BookManager from '../../modules/BookManager'
         console.log("BookList: Render");
       
         return(
+        <>
+        <br />
+        <section className="section-content">
+            <Button variant="success" type="button"
+                className="btn"
+                onClick={() => {this.props.history.push("/books/new")}}>
+                Add New Book
+            </Button>
+        </section><br />
         <div className="pageContent">
-            <h2>Search books: <input type="text"></input></h2><br />
+            <h2>Search books: <input type="text"/></h2><br />
                 <picture>
                     <img src={require('./books.jpeg')} alt="Books" />
                 </picture>    
@@ -49,6 +59,7 @@ import BookManager from '../../modules/BookManager'
             )}
           </div>
         </div>
+        </>
         )
       }
 }

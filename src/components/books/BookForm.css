@@ -1,0 +1,20 @@
+.row.book-form{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.col{
+    max-width: 60%;
+    max-height: 40%;
+}
+
+.page-content{
+    width: 40vw;
+    height: 50vh;
+}
+
+.new-book-form{
+    width: 40vw;
+    height: 50vh;
+}
+

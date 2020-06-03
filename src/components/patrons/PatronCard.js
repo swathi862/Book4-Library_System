@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
 
 class PatronCard extends Component {
 
@@ -7,12 +8,12 @@ class PatronCard extends Component {
 	        <div className="container-main">
                 <div className="section-content">  
                         <ul>
-                            <h3>Name: {this.props.patron.name}</h3>
+                            <h3>{this.props.patron.name}</h3>
                             <p>DOB: {this.props.patron.DOB}</p>
                             <p>Phone: {this.props.patron.phone_number}</p>
                             <p>E-mail: {this.props.patron.email}</p>
                             <p>Patron since: {this.props.patron.account_created}</p>
-                            <button type="button" onClick={()=> this.props.archivePatron(this.props.patron.id)}>Archive</button>
+                            <Button variant="warning" type="button" onClick={()=> this.props.archivePatron(this.props.patron.id)}>Archive</Button>
                         </ul>
                 </div>
                 

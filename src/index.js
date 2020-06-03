@@ -4,6 +4,8 @@ import './index.css';
 import Library from './components/Library';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'materialize-css';
 
 
 ReactDOM.render(
