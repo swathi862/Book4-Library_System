@@ -54,3 +54,13 @@ img{
     margin: 1em;
     padding: 2em;
 }
+
+button{
+    text-transform: none;
+}
+
+.card-content{
+    text-align: center;
+}
+
+

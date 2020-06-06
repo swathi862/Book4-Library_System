@@ -9,17 +9,17 @@ import { Button } from 'react-bootstrap'
         state = {
             patrons: [],
         }
-    patchPatron = id => {
-        PatronManager.patch(id)
-        .then(() =>{
-            PatronManager.getAll()
-            .then((patrons) => {
-                this.setState({
-                    patrons: patrons
-                })
-            })
-        })
-    }
+    // patchPatron = id => {
+    //     PatronManager.patch(id)
+    //     .then(() =>{
+    //         PatronManager.getAll()
+    //         .then((patrons) => {
+    //             this.setState({
+    //                 patrons: patrons
+    //             })
+    //         })
+    //     })
+    // }
 
     componentDidMount(){
         console.log("PATRON LIST: ComponentDidMount");
@@ -39,7 +39,7 @@ import { Button } from 'react-bootstrap'
         <>
         <br/>
         <section className="section-content">
-            <Button variant="success" type="button"
+            <Button variant="outline-info" type="button"
                 className="btn"
                 onClick={() => {this.props.history.push("/patrons/new")}}>
                 Add New Patron
@@ -56,7 +56,7 @@ import { Button } from 'react-bootstrap'
         
           <div className="container-cards">
             {this.state.patrons.map(patron =>
-              patron.active ? <PatronCard key={patron.id} patron={patron} archivePatron={this.patchPatron}/> : ""
+              patron.active ? <PatronCard key={patron.id} patron={patron} /> : ""
             )}
           </div>
         </div>

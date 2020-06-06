@@ -42,14 +42,14 @@
       "coverPhoto": "https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL.jpg"
     },
     {
+      "id": 4,
       "title": "Jane Eyre",
       "author": "Charlotte Bronte",
       "genre": "Romance",
-      "ISBN": "123-982",
+      "ISBN": "456-789",
       "libraryId": 1,
       "available": true,
-      "coverPhoto": "https://img.clipartlook.com/book-clipart-download-this-image-as-600.png",
-      "id": 4
+      "coverPhoto": "https://img.clipartlook.com/book-clipart-download-this-image-as-600.png"
     }
   ],
   "patrons": [
@@ -74,14 +74,14 @@
       "active": true
     },
     {
+      "id": 3,
       "name": "John Doe",
-      "DOB": "05/28/1993",
+      "DOB": "06/05/1993",
       "phone_number": "xxx-xxx-xxxx",
       "email": "john.doe@email.com",
       "libraryId": 1,
-      "account_created": "06/02/2020",
       "active": true,
-      "id": 3
+      "account_created": "06/02/2020"
     }
   ],
   "books-patrons": [
@@ -89,7 +89,7 @@
       "id": 1,
       "bookId": 1,
       "patronId": 1,
-      "due-date": "06/04/2020",
+      "dueDate": "06/04/2020",
       "checkOutDate": "05/28/2020",
       "checkInDate": "05/31/2020"
     },
@@ -97,23 +97,23 @@
       "id": 2,
       "bookId": 3,
       "patronId": 2,
-      "due-date": "06/04/2020",
+      "dueDate": "06/04/2020",
       "checkOutDate": "05/28/2020",
       "checkInDate": "05/31/2020"
     },
     {
       "id": 3,
       "bookId": 2,
-      "patronId": 2,
-      "due-date": "06/04/2020",
-      "checkOutDate": "05/28/2020",
-      "checkInDate": "05/31/2020"
+      "patronId": 1,
+      "dueDate": "06/06/2020",
+      "checkOutDate": "05/31/2020",
+      "checkInDate": null
     },
     {
       "id": 4,
       "bookId": 2,
       "patronId": 2,
-      "due-date": "06/04/2019",
+      "dueDate": "06/04/2019",
       "checkOutDate": "05/28/2019",
       "checkInDate": "05/31/2019"
     },
@@ -121,7 +121,7 @@
       "id": 5,
       "bookId": 2,
       "patronId": 1,
-      "due-date": "06/04/2018",
+      "dueDate": "06/04/2018",
       "checkOutDate": "05/28/2018",
       "checkInDate": "05/31/2018"
     },
@@ -129,7 +129,7 @@
       "id": 6,
       "bookId": 2,
       "patronId": 2,
-      "due-date": "06/04/2017",
+      "dueDate": "06/04/2017",
       "checkOutDate": "05/28/2017",
       "checkInDate": "05/31/2017"
     }

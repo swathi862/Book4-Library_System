@@ -1,25 +1,26 @@
 import React, { Component } from 'react'
 //import the components we will need
+import './BookList.css'
 import BookCard from './BookCard'
 import BookManager from '../../modules/BookManager'
 import Button from 'react-bootstrap/Button'
-
+import { Form, FormControl, Container } from 'react-bootstrap'
     class BookList extends Component {
         //define what this component needs to render
         state = {
             books: [],
         }
-    deleteBook = id =>{
-        BookManager.delete(id)
-        .then(()=>{
-            BookManager.getAll()
-            .then((newBooks) => {
-                this.setState({
-                  books: newBooks
-                })
-            })
-        })
-    }
+    // deleteBook = id =>{
+    //     BookManager.delete(id)
+    //     .then(()=>{
+    //         BookManager.getAll()
+    //         .then((newBooks) => {
+    //             this.setState({
+    //               books: newBooks
+    //             })
+    //         })
+    //     })
+    // }
 
     componentDidMount(){
         console.log("BOOK LIST: ComponentDidMount");
@@ -39,14 +40,20 @@ import Button from 'react-bootstrap/Button'
         <>
         <br />
         <section className="section-content">
-            <Button variant="success" type="button"
+            <Button variant="outline-info" type="button"
                 className="btn"
                 onClick={() => {this.props.history.push("/books/new")}}>
                 Add New Book
             </Button>
         </section><br />
         <div className="pageContent">
-            <h2>Search books: <input type="text"/></h2><br />
+            <Container>
+                <Form inline>
+                    <FormControl type="text" placeholder="Search Books" className="mr-sm-2" />
+                </Form>
+                <Button variant="outline-success">Search</Button>
+            </Container>
+            <br />
                 <picture>
                     <img src={require('./books.jpeg')} alt="Books" />
                 </picture>    

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import './NavBar.css'
@@ -19,6 +18,7 @@ class NavBar extends Component {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/books">Books</Nav.Link>
               <Nav.Link href="/patrons">Patrons</Nav.Link>
+              <Nav.Link href="/check_out">Check Out Books</Nav.Link>
             </Nav>
         </Navbar>
       </header>

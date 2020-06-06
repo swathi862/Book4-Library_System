@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PatronManager from '../../modules/PatronManager';
-import { Button, Form } from 'react-bootstrap'
+import './PatronForm.css'
+import { Button, Form, Container } from 'react-bootstrap'
 
 class PatronForm extends Component {
     // var today = new Date()
@@ -45,6 +46,8 @@ class PatronForm extends Component {
 
     render(){
         return (
+            <Container>
+                <h2 className="form-title">Add a New Patron</h2>
             <Form>
                 <Form.Group>
                     <Form.Label>Name</Form.Label>
@@ -69,11 +72,13 @@ class PatronForm extends Component {
                     <Form.Control type="text" id="email" required
                         onChange={this.handleFieldChange} placeholder="name@email.com" />
                 </Form.Group>
-
-            <Button variant="success" type="submit" disabled={this.state.loadingStatus} onClick={this.constructNewPatron}>
-                Submit
-            </Button>
             </Form>
+                <div className="button-row">
+                <Button className="submit-btn" variant="outline-success" type="submit" disabled={this.state.loadingStatus} onClick={this.constructNewPatron}>
+                    Submit
+                </Button>
+                </div>
+            </Container>
         )
     }
 }
